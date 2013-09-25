@@ -289,3 +289,26 @@ body {
 		}
 	}
 }
+
+.share{
+	padding:0 0 15px 0;
+	border-top:1px solid #fff;
+	float:right;
+}
+
+.post_end{
+	float:right;
+	.categories{
+		background-color:yellow;
+	}
+}
+
+.article_end{
+	.page{
+		float:left;
+		background-color:#99CCFF;
+	}
+	.jiathis{
+		float:right;
+	}
+}
