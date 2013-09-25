@@ -394,6 +394,13 @@ $header-height: 30px;
 					border: 1px solid darken(#EF7522, 10%);
 				}
 			}
+			&.message{
+				background: image-url('social/message.png') center no-repeat #55CFF8;
+				border: 1px solid #55CFF8;
+				&:hover{
+					border: 1px solid #55CFF8;
+				}
+			}
 		}
 	}
 }
