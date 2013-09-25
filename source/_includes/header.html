@@ -11,7 +11,7 @@
 	{% endif %}
 </div>
 {% include custom/header.html %}
-<nav id="main-nav">{% include navigation.html %}</nav>
+
 <nav id="sub-nav">
 	<div class="social">
 		{% if site.facebook_user %}
@@ -47,5 +47,36 @@
 		{% if site.subscribe_rss %}
 		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
 		{% endif %}
+		{% if site.subscribe_email %}
+		<a class="message" href="mailto:{{ site.subscribe_email }}" title="Email">Email</a>
+		{% endif %}
 	</div>
+</nav>
+
+<nav id="main-nav">
+{% if site.simple_search %}
+	<section>
+		<form action="{{ site.simple_search }}" method="get">
+			<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+			<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+		</form>
+	<section>
+{% endif %}	
+
+{% include navigation.html %}
+</nav>
+
+<nav id="sub-nav">
+<br>
+{% include asides/recent_posts.html %}
+</nav>
+
+<nav id="sub-nav">
+{% if site.description %}
+<section class="aboutme">
+  <p style="font-style: italic;">
+    {{ site.description }}
+  </p>
+</section>
+{% endif %}
 </nav>
